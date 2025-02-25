@@ -1,0 +1,5 @@
+database design/
+node_modules/
+public/
+.env
+dbsqlite3

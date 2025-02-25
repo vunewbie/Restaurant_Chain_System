@@ -1,0 +1,24 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+django-environ = "*"
+mysqlclient = "*"
+django-phonenumber-field = "*"
+phonenumbers = "*"
+pillow = "*"
+djangorestframework = "*"
+django-redis = "*"
+django-cors-headers = "*"
+django-filter = "*"
+djangorestframework-simplejwt = "*"
+social-auth-app-django = "*"
+whitenoise = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.12"
