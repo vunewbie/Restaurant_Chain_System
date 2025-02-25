@@ -3,3 +3,7 @@ node_modules/
 public/
 .env
 dbsqlite3
+media/
+static/
+migrations/
+__pycache__/
