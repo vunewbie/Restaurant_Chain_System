@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import styles from "./ScrollToTop.module.css";
+import styles from "./Scroller.module.css";
 
-const ScrollToTop = () => {
+const Scroller = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   // Kiểm tra vị trí cuộn của trang và ẩn/hiện nút ScrollToTop
@@ -45,4 +45,4 @@ const ScrollToTop = () => {
   );
 };
 
-export default ScrollToTop;
+export default Scroller;

@@ -13,7 +13,7 @@ import Shipping from "./pages/shipping/Shipping";
 import Promotion from "./pages/promotion/Promotion";
 import Review from "./pages/review/Review";
 import LoginRegister from "./pages/auth/login-register/LoginRegister";
-import ScrollToTop from './components/scroll-to-top/ScrollToTop';
+import Scroller from './components/scroller/Scroller';
 import './App.css';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
   return (
 
     <>
-      <ScrollToTop />
+      <Scroller />
       <Header isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <Routes>
         <Route path="/" element={<Home />} />
