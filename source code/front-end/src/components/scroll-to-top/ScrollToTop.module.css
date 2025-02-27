@@ -1,0 +1,31 @@
+.scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 20%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(100px);
+    z-index: 9999;  /* Đảm bảo nút luôn ở trên các phần tử khác */
+  }
+  
+  .scrollToTopBtn:hover {
+    background-color: rgba(227, 153, 116, 1);
+  }
+  
+  .scrollToTopBtn:focus {
+    outline: none;
+  }
+  
+  /* Khi button xuất hiện */
+  .scrollToTopBtn.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
