@@ -1,0 +1,93 @@
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  color: black;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  min-height: 200px;
+  max-height: 300px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footerColumn {
+  flex: 1;
+  min-width: 250px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Căn lề trái cho 2 cột cụ thể */
+.footerColumn.textLeft {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.footerColumn h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: bold;
+}
+
+.footerColumn p,
+.footerColumn ul {
+  font-size: 16px;
+  line-height: 2;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerColumn ul li {
+  margin-bottom: 10px;
+}
+
+.footerColumn ul li a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footerColumn ul li a:hover {
+  color: #5161ce;
+}
+
+.footerColumn iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.socialLinks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 50px auto;
+}
+
+.socialLinks li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

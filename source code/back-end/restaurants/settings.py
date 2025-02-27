@@ -135,7 +135,7 @@ if not DEBUG:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Custom user model
-AUTH_USER_MODEL = 'acccounts.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 # Phone number field settings
 PHONENUMBER_DB_FORMAT = 'VN'

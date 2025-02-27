@@ -24,8 +24,8 @@ class CustomUserManager(BaseUserManager):
         return user
     
     def create_superuser(self, username, email, password=None, **extra_fields):
-        extra_fields.setdefault('is_staff', True)
-        extra_fields.setdefault('is_superuser', True)
+        extra_fields.setdefault('type', 'A')
+        extra_fields.setdefault('avatar', 'avatars/admin_avatar.jpg')
 
         return self.create_user(username, email, password, **extra_fields)
 
@@ -57,7 +57,10 @@ class User(AbstractUser):
         return self.type == 'A'
     
     def __str__(self):
-        return self.full_name
+        if self.full_name:
+            return self.full_name
+        else:
+            return self.username
     
     class Meta:
         db_table = 'User'
@@ -96,7 +99,7 @@ class Employee(models.Model):
 class Customer(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
 
-    culmulative_points = models.IntegerField(validators=[MinValueValidator(0)], default=0)
+    cumulative_points = models.IntegerField(validators=[MinValueValidator(0)], default=0)
     total_points = models.IntegerField(validators=[MinValueValidator(0)], default=0)
     tier = models.CharField(max_length=10, choices=[('M', 'Membership'), ('S', 'Silver'), ('G', 'Gold')], default='M')
     last_tier_update = models.DateField(auto_now_add=True)

@@ -1,0 +1,95 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  position: relative;
+  height: 80px;
+}
+
+.navbarLogo img {
+  border-radius: 30%;
+  height: 70px;
+  width: auto;
+  object-fit: cover;
+}
+
+.navbarNav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  position: relative;
+}
+
+.navItem {
+  margin: 0 10px;
+  position: relative;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navItem.active {
+  background-color: rgba(227, 153, 116, 1);
+  font-weight: bold;
+}
+
+.navLink {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  padding: 10px;
+  transition: 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.navLink:hover {
+  color: red;
+}
+
+.navbarToggler {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  background: white;
+  list-style: none;
+  padding: 10px;
+  border-radius: 5px;
+  top: 40px;
+  right: 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.navItem:hover .dropdownMenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdownItem {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: block;
+}
+
+.dropdownItem:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+

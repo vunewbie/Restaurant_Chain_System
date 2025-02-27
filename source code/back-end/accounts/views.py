@@ -1,6 +1,6 @@
 from .serializers import *
 from .models import *
-from .authentications import *
+from .authentication import *
 from .utils import *
 from .permissions import *
 

@@ -1,0 +1,154 @@
+/* ==== Container chính ==== */
+.homeContainer {
+    padding: 40px;
+    text-align: center;
+  }
+  
+  /* ==== Phân chia từng phần ==== */
+  .section {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 2px solid #ddd;
+  }
+  
+  .sectionTitle {
+    font-size: 28px;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* ==== Slider ==== */
+  .sliderContainer {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .active {
+    opacity: 1;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: scale(1.05);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* ==== Gallery ==== */
+.imageGallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* Nếu có nhiều hơn 6 ảnh -> Dùng layout 3x4 */
+  @media (min-width: 768px) {
+    .imageGallery {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Bọc mỗi ảnh */
+  .imageWrapper {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    width: 350px;
+    max-width: 350px;
+    height: 350px;
+    margin: auto;
+  }
+  
+  .imageWrapper:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Ảnh */
+  .galleryImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  /* Overlay màu xám */
+  .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .imageWrapper:hover .imageOverlay {
+    opacity: 0;
+  }
+  
+  /* Văn bản trên ảnh */
+  .imageText {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+  }
+  
+  /* Lightbox */
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .lightboxImage {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+  }
